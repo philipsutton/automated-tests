@@ -1,16 +1,28 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import time
+import unittest
+from selenium import webdriver
+from selenium.webdriver import Keys
+from selenium.webdriver.common.by import By
 
 
-# Press the green button in the gutter to run the script.
+class test1(unittest.TestCase):
+
+    def setUp(self):
+        self.driver = webdriver.Firefox()
+        self.driver.get('https://www.phptravels.net/login')
+
+    def test_1(self):
+        print("entered")
+        time.sleep(5)
+        self.driver.find_element(By.CLASS_NAME, "form-group").click()
+        self.driver.find_element(By.CLASS_NAME, "form-group").send_keys(Keys.DOWN + "hello")
+        time.sleep(5)
+        self.driver.find_element(By.CLASS_NAME, "form-group mb-2").send_keys("hello")
+
+    def tearDown(self):
+        self.driver.close()
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    unittest.main()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
