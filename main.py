@@ -12,7 +12,6 @@ class test1(unittest.TestCase):
         self.driver.get('https://www.phptravels.net/login')
 
     def test_1(self):
-        print("entered")
         time.sleep(5)
         self.driver.find_element(By.CLASS_NAME, "form-group").click()
         self.driver.find_element(By.CLASS_NAME, "form-group").send_keys(Keys.DOWN + "hello")
