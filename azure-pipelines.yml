@@ -26,3 +26,9 @@ steps:
       echo %cd%
       for /r %%i in (*.py) do "python.exe" %%i
   displayName: 'Run tests'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFIles: "**/TEST-*.xml"
+    searchFolder:'$(System.DefaultWorkingDirectory)\reports'

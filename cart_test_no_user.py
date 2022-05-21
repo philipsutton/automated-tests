@@ -6,6 +6,8 @@ from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+from xmlrunner import xmlrunner
+
 
 class CartTestsNoUser(unittest.TestCase):
     def setUp(self):
@@ -32,5 +34,5 @@ class CartTestsNoUser(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output = 'reports'),failfast=False,buffer=False,catchbreak=False)
 

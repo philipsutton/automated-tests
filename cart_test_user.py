@@ -1,5 +1,7 @@
 import time
 import unittest
+
+import xmlrunner
 from selenium.webdriver.support import expected_conditions as EC
 from cart_test_no_user import CartTestsNoUser
 from selenium import webdriver
@@ -30,4 +32,4 @@ class CartTestsUser(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output = 'reports'),failfast=False,buffer=False,catchbreak=False)
