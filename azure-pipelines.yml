@@ -20,7 +20,7 @@ steps:
       pip install -r requirements.txt
   displayName: 'Install dependencies'
 
--task: CmdLine@2
+- task: CmdLine@2
   inputs:
     script: |
       echo %cd%
