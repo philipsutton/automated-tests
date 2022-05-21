@@ -11,6 +11,7 @@ class LoginTests(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
+        self.driver.maximize_window()
         self.driver.get('https://demo.opencart.com')
         self.frontend_link = "https//demo.opencart.com"
         self.backend_link = "https://demo.opencart.com/admin/"
