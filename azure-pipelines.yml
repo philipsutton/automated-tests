@@ -31,4 +31,4 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: "**/TEST-*.xml"
-    searchFolder: "$(Pipeline.Workspace)\reports"
+    searchFolder: "$(System.DefaultWorkingDirectory)\reports"
