@@ -31,4 +31,4 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: "**/TEST-*.xml"
-    searchFolder: "$(System.DefaultWorkingDirectory)\reports"
+    searchFolder: "D:\a\1\s\reports"
