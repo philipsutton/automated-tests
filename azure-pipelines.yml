@@ -24,4 +24,5 @@ steps:
   inputs:
     script: |
       echo %cd%
+      login_test.py
   displayName: 'Run tests'
