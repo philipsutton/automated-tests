@@ -27,8 +27,13 @@ steps:
       for /r %%i in (*.py) do "python.exe" %%i
   displayName: 'Run tests'
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: "**/TEST-*.xml"
-    searchFolder: "$(System.DefaultWorkingDirectory)\reports"
+#- task: PublishTestResults@2
+#  inputs:
+#    testResultsFormat: 'JUnit'
+#    testResultsFiles: "**/TEST-*.xml"
+#    searchFolder: "$(System.DefaultWorkingDirectory)\reports"
+
+- script: |
+    pip install pytest pytest-azurepipelines
+    pytest
+  displayName: 'pytest'
