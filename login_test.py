@@ -1,4 +1,6 @@
 import unittest
+
+import xmlrunner as xmlrunner
 from selenium.webdriver.support import expected_conditions as EC
 
 from selenium import webdriver
@@ -54,6 +56,6 @@ class LoginTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output = 'reports'),failfast=False,buffer=False,catchbreak=False)
 #email_form = driver.find_element(By.ID, "input-emaill")
 #self.assertEqual(email_form.get_attribute('value'), 'philip@sutton.pl', "Wrong account")
