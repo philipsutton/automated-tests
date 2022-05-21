@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<testsuite name="LoginTests-20220521125512" tests="2" time="19.266" failures="0" errors="0">
+	<testcase classname="LoginTests" name="test_invalid_credentials" time="9.570"/>
+	<testcase classname="LoginTests" name="test_login_successful" time="9.696"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>
