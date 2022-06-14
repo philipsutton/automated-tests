@@ -1,7 +1,6 @@
-import time
 import unittest
 from selenium.webdriver.support import expected_conditions as EC
-from cart_test_no_user import CartTestsNoUser
+from tests.cart_test_no_user import CartTestsNoUser
 from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By

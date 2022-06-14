@@ -1,6 +1,6 @@
+import time
 import unittest
 from selenium.webdriver.support import expected_conditions as EC
-
 from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
@@ -19,6 +19,7 @@ class LoginTests(unittest.TestCase):
         driver = self.driver
         WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.LINK_TEXT, "My Account"))).click()
         driver.find_element(By.LINK_TEXT, "Login").click()
+        time.sleep(1)
         WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "input-email"))).send_keys(
             'philip@example.com')
         driver.find_element(By.ID, "input-password").send_keys('testpassword' + Keys.ENTER)
