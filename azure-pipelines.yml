@@ -26,8 +26,9 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      echo python --version
-  displayName: 'CMD line'
+      echo %cd%
+      for /r %%i in (*.py) do "python.exe" %%i
+  displayName: 'Run tests'
 
 - script: |
     python -m pip install --upgrade pip
