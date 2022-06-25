@@ -11,7 +11,7 @@ class CartTest(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Edge()
-        self.driver.get('https://demo.opencart.com')
+        self.driver.get('http://localhost:8080/opencart/upload/index.php?route=common/home&language=en-gb')
 
     def test_login_successful(self):
         driver = self.driver
@@ -27,9 +27,9 @@ class CartTest(unittest.TestCase):
         def enter_details():
             try:
                 WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH, "//input[@id='input-email']"))).send_keys('philip@example.com')
-                time.sleep(5)
-                driver.find_element(By.XPATH, "//input[@id='input-password']").send_keys('testpassword' + Keys.ENTER)
-                time.sleep(60)
+
+                driver.find_element(By.XPATH, "//input[@id='input-password']").send_keys('testpassword')
+
                 driver.find_element(By.XPATH, "//button[text()='Login']").click()
                 return True
             except:
@@ -61,9 +61,9 @@ class CartTest(unittest.TestCase):
         def enter_details():
             try:
                 WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH, "//input[@id='input-email']"))).send_keys('philip@example.com')
-                time.sleep(5)
-                driver.find_element(By.XPATH, "//input[@id='input-password']").send_keys('testpassword' + Keys.ENTER)
-                time.sleep(60)
+
+                driver.find_element(By.XPATH, "//input[@id='input-password']").send_keys('testpassword1' + Keys.ENTER)
+
                 driver.find_element(By.XPATH, "//button[text()='Login']").click()
                 return True
             except:
@@ -71,7 +71,7 @@ class CartTest(unittest.TestCase):
 
         def message_shown():
             try:
-                WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH,"//div[text()= ' Warning: No match for E-Mail Address and/or Password.']")))
+                WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH,"//div[text()= 'Warning: No match for E-Mail Address and/or Password.']")))
                 return True
             except:
                 return False
