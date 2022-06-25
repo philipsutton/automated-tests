@@ -23,17 +23,19 @@ steps:
 
 
 
+
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
 - task: CmdLine@2
   inputs:
     script: |
       echo %cd%
       for /r %%i in (*.py) do "python.exe" %%i
   displayName: 'Run tests'
-
-- script: |
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-  displayName: 'Install dependencies'
 
 #- script: |
 #    pip install pytest pytest-azurepipelines
