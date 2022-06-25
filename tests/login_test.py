@@ -54,6 +54,6 @@ class LoginTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    #unittest.main()
 #email_form = driver.find_element(By.ID, "input-emaill")
 #self.assertEqual(email_form.get_attribute('value'), 'philip@sutton.pl', "Wrong account")
