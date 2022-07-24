@@ -47,4 +47,4 @@ steps:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
     failTaskOnFailedTests: true
-    searchFolder: '$(System.DefaultWorkingDirectory)\TestResults'
+    searchFolder: '$(System.DefaultWorkingDirectory)\reports'
