@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+from xmlrunner import XMLTestRunner
 
 
 class CartTest(unittest.TestCase):
@@ -85,4 +86,5 @@ class CartTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    #unittest.main()
+    unittest.main(testRunner=XMLTestRunner(output='reports'), failfast=False,buffer=False, catchbreak=False)
