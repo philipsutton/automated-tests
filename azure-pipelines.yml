@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: 'agent1'
+  name: Default
 #strategy:
 #  matrix:
 #    Python27:
