@@ -71,7 +71,7 @@ class CartTest(unittest.TestCase):
 
         def message_shown():
             try:
-                WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH,"//div[text()= 'Warning: No match for E-Mail Address and/or Password.']")))
+                WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH,"//div[text()= ' Warning: No match for E-Mail Address and/or Password. ']")))
                 return True
             except:
                 return False
